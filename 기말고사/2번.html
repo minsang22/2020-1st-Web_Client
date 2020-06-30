@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<head>
+<title>2번 문제</title>
+<style>
+	hr{
+		border : 5px solid yellowgreen;
+	}
+</style>
+<script>
+	ran=parseInt((Math.random()*45)+1);
+	var count = 1;
+	function guess(){
+
+		num1=document.getElementById("user").value;
+
+		if(num1==ran){
+			document.getElementById("result").value = "정답입니다!";
+		}
+
+		else{
+			if(ran>num1){
+				document.getElementById("result").value = "DOWN!";
+			}
+			else{
+				document.getElementById("result").value = "UP!";
+			}
+		}
+
+		document.getElementById("guesses").value=((count++)+"회");		
+	}
+</script>
+</head>
+<body>
+<h3>숫자 맞히기 게임</h3>
+<hr>
+1에서 45사이의 수를 입력하세요.<br>
+<form>
+	숫자 :
+	<input type="text" id="user" size="5">
+	<input type="button" id="btn" value="확인" onclick="guess()">
+
+	결과 : 
+	<input type="text" id="result" size="16">
+
+	시도 횟수:
+	<input type="text" id="guesses" size="30">
+
+</form>
+</body>
+</html>
