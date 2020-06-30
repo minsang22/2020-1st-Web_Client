@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>마우스를 올려봐요</title>
+<style>
+@keyframes rotation{
+   100% {
+      transform:scale(2,2);
+   }
+}
+   div{
+      padding-top: 20px;
+      padding-left: 20px;
+   }
+   div img:hover{
+      animation-name: rotation;
+      animation-duration: 2s;
+      animation-iteration-count:infinite;
+   }
+</style>
+</head>
+<body>
+   <h3>마우스를 올려봐요</h3>
+   <hr>
+   <div>
+      <img src="spongibob.jpg">
+   </div>
+</body>
+</html>
