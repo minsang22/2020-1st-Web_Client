@@ -1,0 +1,100 @@
+v<!DOCTYPE html>
+<html>
+<head>
+	<title>문제 2</title>
+</head>
+<body>
+<h3>피자 주문</h3>
+
+
+	<form name = "testForm">
+		<fieldset>
+			<legend>사이즈</legend>
+			<label>Large - 24000 원</label>
+		</fieldset>
+		<fieldset>
+			<legend>추가 주문</legend>
+			<label><input type="checkbox" name="pickle" id="pickle"> 피클(800원) </label>
+			<label><input type="checkbox" name="chili" id="chili"> 칠리 소스(300원) </label>
+			<label><input type="checkbox" name="dipping" id="dipping"> 디핑 소스(200원) </label>
+			<label><input type="checkbox" name="cheese" id="cheese"> 치즈스틱(4개, 4800원) </label>
+			<label><input type="checkbox" name="corn" id="corn"> 콘 샐러드(2400원) </label>
+		</fieldset>
+		<form name = "cost">
+		<fieldset>
+			<legend>합계</legend>
+			<output name="total" id="cost"></output>
+		</fieldset>
+		</form>
+
+<script>
+var pickle = document.querySelector("#pickle");
+var chili = document.querySelector("#chili");
+var dipping = document.querySelector("#dipping");
+var cheese = document.querySelector("#cheese");
+var corn = document.querySelector("#corn");
+
+var price = 24000;
+
+document.querySelector("#cost").value = price+"원";
+
+pickle.addEventListener("click", function() {
+   if (pickle.checked == true)
+   {
+      price += 800;
+   }
+   else{
+      price -= 800;
+   }
+   document.querySelector("#cost").value = price+"원";
+});
+
+chili.addEventListener("click", function() {
+   if (chili.checked == true)
+   {
+      price += 300;
+   }
+   else{
+      price -= 300;
+   }
+   document.querySelector("#cost").value = price+"원";
+});
+
+dipping.addEventListener("click", function() {
+   if (dipping.checked == true)
+   {
+      price += 200;
+   }
+   else{
+      price -= 200;
+   }
+   document.querySelector("#cost").value = price+"원";
+});
+
+cheese.addEventListener("click", function() {
+   if (cheese.checked == true)
+   {
+      price += 4800;
+   }
+   else{
+      price -= 4800;
+   }
+   document.querySelector("#cost").value = price+"원";
+});
+
+corn.addEventListener("click", function() {
+   if (corn.checked == true)
+   {
+      price += 2400;
+   }
+   else{
+      price -= 2400;
+   }
+   document.querySelector("#cost").value = price+"원";
+});
+
+
+</script>
+
+</body>
+</html>
