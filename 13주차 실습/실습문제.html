@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>13주차 실습</title>
+
+</head>
+<body>
+<h3>라디오 버튼을 클릭하면 이미지를 출력합니다.</h3>
+<hr>
+<form>
+	<input type = "radio" name = "season" value = "spring.jpeg">봄
+	<input type = "radio" name = "season" value = "summer.jpeg" checked>여름
+	<input type = "radio" name = "season" value = "fall.jpeg">가을
+	<input type = "radio" name = "season" value = "winter.jpeg">겨울
+</form>
+ <br>
+ <img src="summer.jpeg" alt="계절" id="img" width="300">
+
+<script>
+	var season = document.getElementsByName("season");
+    var img = document.getElementById("img");
+
+	for(var i=0; i<season.length; i++){
+      season[i].addEventListener("click", changeImage);
+    }
+
+    function changeImage() {
+      var source = this.value;
+      img.src = source;
+    }
+
+</script>
+
+</body>
+</html>
