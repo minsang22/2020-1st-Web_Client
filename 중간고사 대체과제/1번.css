@@ -1,0 +1,35 @@
+div{
+	border: 10px double black;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 100px;
+	height: 50%;
+	width: 50%;
+}
+
+p{
+	text-align: center;
+}
+
+span{
+	display: table;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#answer{
+	font-family: "나눔스퀘어";
+	font-weight: bold;
+	font-size: 40px;
+}
+
+#After100{
+	font-weight: bold;
+	font-size: 22px;
+}
+
+#AfterAns{
+	font-weight: bold;
+	font-size: 22px;
+}
+
